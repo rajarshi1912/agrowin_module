@@ -1,0 +1,37 @@
+[
+  {
+    "name": "active_ready_mix",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "cereals_fungicides_segmentation",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "action_type",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "row_insert_timestamp",
+    "mode": "NULLABLE",
+    "type": "TIMESTAMP",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "row_update_timestamp",
+    "mode": "NULLABLE",
+    "type": "TIMESTAMP",
+    "description": "",
+    "fields": []
+  }
+]

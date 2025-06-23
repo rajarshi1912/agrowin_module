@@ -1,0 +1,16 @@
+[
+  {
+    "name": "crop_main_group_incl_sunflwr_as_main_crop",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "strategic_crops",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "distributor_r_and_d_vs_generics",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "distributor",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "f3",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "action_type",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "row_insert_timestamp",
+    "mode": "NULLABLE",
+    "type": "TIMESTAMP",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "row_update_timestamp",
+    "mode": "NULLABLE",
+    "type": "TIMESTAMP",
+    "description": "",
+    "fields": []
+  }
+]

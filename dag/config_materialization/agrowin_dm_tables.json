@@ -1,0 +1,15 @@
+{
+
+"bcs_full_cycle_core_call_proc": "call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-application-np','agrowin_tl_etl_v', 'full_cycle','bcs-edf-application-np','agrowin_tl_t','full_cycle', 'TR')",
+
+"bcs_in_season_core_call_proc": "call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-application-np','agrowin_tl_etl_v', 'in_season','bcs-edf-application-np','agrowin_tl_t','in_season', 'TR')",
+
+"bcs_advanced_analytics_core_call_proc":"call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-application-np','agrowin_tl_etl_v','advanced_analytics','bcs-edf-application-np','agrowin_tl_t','advanced_analytics','TR')",
+
+"bcs_no_match_countries_core_call_proc": "call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-application-np','agrowin_tl_etl_v','no_match_countries','bcs-edf-application-np','agrowin_tl_t','no_match_countries','TR')",
+
+"bcs_no_match_exchange_rates_core_call_proc": "call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-application-np','agrowin_tl_etl_v','no_match_exchange_rates','bcs-edf-application-np','agrowin_tl_t','no_match_exchange_rates','TR')",
+
+"bcs_final_flow_core_call_proc": "call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-application-np','agrowin_tl_etl_v','final_flow','bcs-edf-application-np','agrowin_tl_t','final_flow','TR')"
+
+}

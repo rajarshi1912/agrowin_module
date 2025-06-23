@@ -1,0 +1,9 @@
+SELECT
+  country_original,
+  country,
+  cluster_new,
+  country_group,
+  eu_gb_no_ch_VS_non_eu,
+  eu27_VS_non_eu
+FROM
+  `bcs-edf-ingestion-np.m_agrowin_lz_t.countries`

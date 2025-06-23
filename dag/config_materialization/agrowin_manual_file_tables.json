@@ -1,0 +1,15 @@
+{
+
+"bcs_21_ex_rates_core_call_proc": "call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-ingestion-np','m_agrowin_lz_etl_v', '21_ex_rates','bcs-edf-ingestion-np','m_agrowin_lz_t','21_ex_rates', 'TR')",
+
+"bcs_companies_core_call_proc": "call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-ingestion-np','m_agrowin_lz_etl_v', 'companies','bcs-edf-ingestion-np','m_agrowin_lz_t','companies', 'TR')",
+
+"bcs_countries_core_call_proc":"call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-ingestion-np','m_agrowin_lz_etl_v','countries','bcs-edf-ingestion-np','m_agrowin_lz_t','countries','TR')",
+
+"bcs_crops_core_call_proc": "call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-ingestion-np','m_agrowin_lz_etl_v','crops','bcs-edf-ingestion-np','m_agrowin_lz_t','crops','TR')",
+
+"bcs_distrib_clean_core_call_proc": "call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-ingestion-np','m_agrowin_lz_etl_v','distrib_clean','bcs-edf-ingestion-np','m_agrowin_lz_t','distrib_clean','TR')",
+
+"bcs_fungi_core_call_proc": "call `bcs-csw-materialization-np.etl_dml_eu.sp_run_mtlz_lo`('bcs-edf-ingestion-np','m_agrowin_lz_etl_v','fungi','bcs-edf-ingestion-np','m_agrowin_lz_t','fungi','TR')"
+
+}
