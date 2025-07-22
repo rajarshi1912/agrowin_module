@@ -1,0 +1,111 @@
+#Total Final Flow - Step 27
+
+WITH
+  #Total Final Flow - Step 25
+  companies AS(
+  SELECT
+    distributor_r_and_d_vs_generics,
+    distributor
+  FROM `bcs-edf-ingestion.m_agrowin_cz.companies`),
+  
+  #Total Final Flow - Step 26.2
+  country_mapping_clean AS(
+  SELECT
+    year,
+    country,
+    indication,
+    crop_main_group,
+    crop_group,
+    crop,
+    product_type,
+    product_group,
+    product,
+    formulation_type_complete,
+    straight_or_mix,
+    active_ready_mix,
+    distributor_group,
+    distributor_original,
+    year_calendar,
+    active_mix_flexigroup_autumn_spring_herb_emea,
+    pest_main_group,
+    pest_group,
+    complex_pest,
+    pest,
+    pest_principal,
+    area_product_000_ha,
+    pest_area_000_ha,
+    volume_product_000_kg_li,
+    value_distributor_000_eur,
+    value_user_000_eur,
+    exchange_rate,
+    local_currency_code,
+    local_currency,
+    value_user_000_local,
+    value_distributor_000_local,
+    report_type,
+    completeness_flag,
+    formulation_type_code,
+    formulation_type,
+    cereals_fungicide_segmentation,
+    distributor,
+    distributor_clean,
+    country_original,
+    country_1,
+    cluster_new,
+    country_group,
+    eu_gb_no_ch_VS_non_eu,
+    eu27_VS_non_eu
+  FROM bcs-edf-ingestion.gc_agrowin_cz.country_mapping
+  WHERE country IS NOT NULL AND country_1 IS NOT NULL)
+
+SELECT
+  year,
+  country,
+  indication,
+  crop_main_group,
+  crop_group,
+  crop,
+  product_type,
+  product_group,
+  product,
+  formulation_type_complete,
+  straight_or_mix,
+  active_ready_mix,
+  distributor_group,
+  distributor_original,
+  year_calendar,
+  active_mix_flexigroup_autumn_spring_herb_emea,
+  pest_main_group,
+  pest_group,
+  complex_pest,
+  pest,
+  pest_principal,
+  area_product_000_ha,
+  pest_area_000_ha,
+  volume_product_000_kg_li,
+  value_distributor_000_eur,
+  value_user_000_eur,
+  exchange_rate,
+  local_currency_code,
+  local_currency,
+  value_user_000_local,
+  value_distributor_000_local,
+  report_type,
+  completeness_flag,
+  formulation_type_code,
+  formulation_type,
+  cereals_fungicide_segmentation,
+  a.distributor,
+  distributor_clean,
+  country_original,
+  country_1,
+  cluster_new,
+  country_group,
+  eu_gb_no_ch_VS_non_eu,
+  eu27_VS_non_eu,
+  if(distributor_r_and_d_vs_generics is null,'Generics', distributor_r_and_d_vs_generics) as r_and_d_vs_generics,
+  b.distributor as distributor_1
+FROM
+  country_mapping_clean a
+LEFT JOIN companies b
+ON a.distributor_original = b.distributor;
