@@ -35,4 +35,4 @@ SELECT
   "Full-Cycle" AS report_type,
   "All Data" AS completeness_flag
 FROM
-  `bcs-edf-ingestion.gc_agrowin_cz.full_cycle`;
+  `bcs-edf-ingestion-np.gc_agrowin_cz.full_cycle`;
