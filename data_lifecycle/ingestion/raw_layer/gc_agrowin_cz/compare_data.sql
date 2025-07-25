@@ -33,8 +33,8 @@ SELECT
   value_user_000_fixed,
   value_distributor_000_fixed,
   report_type_and_completeness
-FROM bcs-edf-ingestion.gc_agrowin_cz.comparable_data_flow a
-INNER JOIN bcs-edf-ingestion.gc_agrowin_cz.comparable_groups b
+FROM bcs-edf-ingestion-np.gc_agrowin_cz.comparable_data_flow a
+INNER JOIN bcs-edf-ingestion-np.gc_agrowin_cz.comparable_groups b
 ON a.country=b.country
   AND a.indication=b.indication
   AND a.crop_main_group=b.crop_main_group;
