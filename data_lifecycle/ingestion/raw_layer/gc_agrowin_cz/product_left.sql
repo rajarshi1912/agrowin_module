@@ -6,7 +6,7 @@ WITH
   SELECT
     DISTINCT product AS product
   FROM
-    `bcs-edf-ingestion.gc_agrowin_cz.product`),
+    `bcs-edf-ingestion-np.gc_agrowin_cz.product`),
 
   #Advanced analytics - Step 20
   product_cross_join AS(
@@ -19,7 +19,7 @@ WITH
     area_grown_000_ha,
     indication,
     product
-  FROM bcs-edf-ingestion.gc_agrowin_cz.cultivated_area
+  FROM bcs-edf-ingestion-np.gc_agrowin_cz.cultivated_area
   CROSS JOIN distinct_product)
 
 SELECT
@@ -43,7 +43,7 @@ SELECT
   value_user_000_local,
   value_distributor_000_local
 FROM product_cross_join a
-LEFT JOIN bcs-edf-ingestion.gc_agrowin_cz.product b
+LEFT JOIN bcs-edf-ingestion-np.gc_agrowin_cz.product b
 ON
   a.country=b.country
   AND a.crop = b.crop
