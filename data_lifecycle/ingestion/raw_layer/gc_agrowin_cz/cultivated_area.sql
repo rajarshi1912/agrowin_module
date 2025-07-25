@@ -6,7 +6,7 @@ WITH
   SELECT
     DISTINCT indication AS indication
   FROM
-    `bcs-edf-ingestion.gc_agrowin_cz.crop`),
+    `bcs-edf-ingestion-np.gc_agrowin_cz.crop`),
 
   #Advanced analytics - Step 3
   cultivated_area AS(
@@ -18,7 +18,7 @@ WITH
     crop_cd as crop,
     area_grwn_000_ha as area_grown_000_ha
   FROM
-    `bcs-edf-ingestion.gc_agrowin_cz.cssi_agrwn_cultv_area`)
+    `bcs-edf-ingestion-np.gc_agrowin_cz.cssi_agrwn_cultv_area`)
 
 SELECT
   year,
