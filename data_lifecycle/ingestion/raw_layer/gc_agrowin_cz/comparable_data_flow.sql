@@ -34,4 +34,4 @@ SELECT
   value_distributor_000_fixed,
   "In Season | Only Comparable Data" as report_type_and_completeness
 FROM
-  `bcs-edf-ingestion.gc_agrowin_cz.ex_rate_clean` ;
+  `bcs-edf-ingestion-np.gc_agrowin_cz.ex_rate_clean` ;
