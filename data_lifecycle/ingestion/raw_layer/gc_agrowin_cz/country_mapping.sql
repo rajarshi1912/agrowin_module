@@ -10,7 +10,7 @@ WITH
     country_group,
     eu_gb_no_ch_VS_non_eu,
     eu27_VS_non_eu
-  FROM `bcs-edf-ingestion.m_agrowin_cz.countries`)
+  FROM `bcs-edf-ingestion-np.m_agrowin_cz.countries`)
 
 SELECT
   year,
@@ -57,6 +57,6 @@ SELECT
   country_group,
   eu_gb_no_ch_VS_non_eu,
   eu27_VS_non_eu
-FROM bcs-edf-ingestion.gc_agrowin_cz.distributor_mapping a
+FROM bcs-edf-ingestion-np.gc_agrowin_cz.distributor_mapping a
 FULL OUTER JOIN countries b
 ON upper(a.country)=upper(b.country_original);
