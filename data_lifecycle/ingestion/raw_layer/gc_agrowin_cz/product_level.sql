@@ -21,4 +21,4 @@ SELECT
   value_distributor_000_local,
   "Product" as level,
   product as dimension,
-FROM bcs-edf-ingestion.gc_agrowin_cz.product_left  
+FROM bcs-edf-ingestion-np.gc_agrowin_cz.product_left  
