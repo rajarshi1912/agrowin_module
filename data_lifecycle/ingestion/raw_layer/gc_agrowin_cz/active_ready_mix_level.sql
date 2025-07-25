@@ -6,7 +6,7 @@ distinct_active_ready_mix AS (
 SELECT
   DISTINCT active_ready_mix AS active_ready_mix
 FROM
-  `bcs-edf-ingestion.gc_agrowin_cz.active_ready_mix`),
+  `bcs-edf-ingestion-np.gc_agrowin_cz.active_ready_mix`),
 
 #Advanced analytics - Step 27 
 active_ready_mix_cross_join AS(
@@ -22,7 +22,7 @@ SELECT
 FROM
   distinct_active_ready_mix
 CROSS JOIN
-  bcs-edf-ingestion.gc_agrowin_cz.cultivated_area),
+  bcs-edf-ingestion-np.gc_agrowin_cz.cultivated_area),
 
 #Advanced analytics - Step 28 
 active_ready_mix_left AS(
@@ -49,7 +49,7 @@ SELECT
 FROM
   active_ready_mix_cross_join a
 LEFT JOIN
-  bcs-edf-ingestion.gc_agrowin_cz.active_ready_mix b
+  bcs-edf-ingestion-np.gc_agrowin_cz.active_ready_mix b
 ON
   a.active_ready_mix =b.active_ready_mix
   AND a.country = b.country
@@ -65,7 +65,7 @@ SELECT
   active_ready_mix,
   cereals_fungicides_segmentation
 FROM
-  `bcs-edf-ingestion.m_agrowin_cz.fungi`
+  `bcs-edf-ingestion-np.m_agrowin_cz.fungi`
 WHERE
   cereals_fungicides_segmentation != 'N/A'
   AND cereals_fungicides_segmentation IS NOT NULL) 
