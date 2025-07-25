@@ -37,7 +37,7 @@ WITH
     value_distributor_000_local,
     report_type
   FROM
-    `bcs-edf-ingestion.gc_agrowin_cz.comparable_data`
+    `bcs-edf-ingestion-np.gc_agrowin_cz.comparable_data`
   WHERE
     completeness_flag ="Only Comparable Data")
 
