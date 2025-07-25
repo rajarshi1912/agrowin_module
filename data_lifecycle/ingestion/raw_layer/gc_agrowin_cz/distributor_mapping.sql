@@ -39,7 +39,7 @@ SELECT
   cereals_fungicide_segmentation,
   distributor,
   distributor_clean
-FROM bcs-edf-ingestion.gc_agrowin_cz.fungi_mapping a
-LEFT JOIN `bcs-edf-ingestion.m_agrowin_cz.distrib_clean` b
+FROM bcs-edf-ingestion-np.gc_agrowin_cz.fungi_mapping a
+LEFT JOIN `bcs-edf-ingestion-np.m_agrowin_cz.distrib_clean` b
 ON a.distributor_original = b.distributor
 ;
