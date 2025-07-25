@@ -4,14 +4,14 @@ WITH
   filter_nulls AS(
   SELECT
     *
-  FROM bcs-edf-ingestion.gc_agrowin_cz.comparable_data_flow
+  FROM bcs-edf-ingestion-np.gc_agrowin_cz.comparable_data_flow
   WHERE area_treated_000_ha IS NOT NULL),
   
   #Advanced analytics - Step 43
   max_year AS(
   SELECT
     MAX(year) AS year
-  FROM bcs-edf-ingestion.gc_agrowin_cz.comparable_data_flow),
+  FROM bcs-edf-ingestion-np.gc_agrowin_cz.comparable_data_flow),
 
   #Advanced analytics - Step 44
   grouped_max_year AS(
