@@ -3,9 +3,9 @@
 WITH
   #Total Final Flow - Step 11
   in_season_and_full_cycle AS (
-  SELECT * FROM bcs-edf-ingestion.gc_agrowin_cz.complete_data
+  SELECT * FROM bcs-edf-ingestion-np.gc_agrowin_cz.complete_data
   UNION ALL
-  SELECT * FROM bcs-edf-ingestion.gc_agrowin_cz.full_cycle_clean)
+  SELECT * FROM bcs-edf-ingestion-np.gc_agrowin_cz.full_cycle_clean)
 
 SELECT
   PARSE_DATE('%Y', CAST(year AS STRING)) AS year,
