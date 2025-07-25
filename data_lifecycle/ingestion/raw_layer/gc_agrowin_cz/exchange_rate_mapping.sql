@@ -7,7 +7,7 @@ WITH
     local_currency_code,
     fixed_exchange_rate,
     budget
-  FROM `bcs-edf-ingestion.m_agrowin_cz.21_ex_rates`)
+  FROM `bcs-edf-ingestion-np.m_agrowin_cz.21_ex_rates`)
 
 SELECT
   year,
@@ -62,7 +62,7 @@ SELECT
   b.local_currency_code as local_currency_code_1 ,
   fixed_exchange_rate,
   budget
-FROM bcs-edf-ingestion.gc_agrowin_cz.crops_mapping a
+FROM bcs-edf-ingestion-np.gc_agrowin_cz.crops_mapping a
 LEFT JOIN ex_rates AS b
 ON a.local_currency_code=b.local_currency_code
 ;
