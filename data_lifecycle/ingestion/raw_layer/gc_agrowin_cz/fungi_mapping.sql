@@ -7,7 +7,7 @@ WITH
       active_ready_mix,
       cereals_fungicides_segmentation
     FROM
-      `bcs-edf-ingestion.m_agrowin_cz.fungi`
+      `bcs-edf-ingestion-np.m_agrowin_cz.fungi`
     WHERE
       cereals_fungicides_segmentation != 'N/A')
 
@@ -52,7 +52,7 @@ SELECT
     WHEN cereals_fungicides_segmentation IS NULL THEN "Not Relevant"
     ELSE cereals_fungicides_segmentation
   END AS cereals_fungicide_segmentation
-FROM bcs-edf-ingestion.gc_agrowin_cz.in_season_and_full_cycle a
+FROM bcs-edf-ingestion-np.gc_agrowin_cz.in_season_and_full_cycle a
 LEFT JOIN fungi_clean b
 ON a.active_ready_mix = b.active_ready_mix
 ;
