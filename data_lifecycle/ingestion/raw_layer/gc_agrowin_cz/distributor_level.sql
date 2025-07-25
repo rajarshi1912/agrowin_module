@@ -6,14 +6,14 @@ WITH
   SELECT
     distributor_r_and_d_vs_generics AS r_and_d_vs_generics,
     distributor
-  FROM `bcs-edf-ingestion.m_agrowin_cz.companies`),
+  FROM `bcs-edf-ingestion-np.m_agrowin_cz.companies`),
 
   #Advanced analytics - Step 14
   distrb_mapping AS(
   SELECT
     distributor, 
     distributor_clean
-  FROM bcs-edf-ingestion.m_agrowin_cz.distrib_clean),
+  FROM bcs-edf-ingestion-np.m_agrowin_cz.distrib_clean),
 
   #Advanced analytics - Step 12 & 13
   companies_clean AS(
@@ -39,7 +39,7 @@ WITH
     value_distributor_000_local,
     IF(r_and_d_vs_generics IS NULL,"Generics",r_and_d_vs_generics) AS r_and_d_vs_generics
   FROM companies a
-  RIGHT JOIN bcs-edf-ingestion.gc_agrowin_cz.distributor_left b
+  RIGHT JOIN bcs-edf-ingestion-np.gc_agrowin_cz.distributor_left b
   ON a.distributor = b.distributor_original)
 
 SELECT
