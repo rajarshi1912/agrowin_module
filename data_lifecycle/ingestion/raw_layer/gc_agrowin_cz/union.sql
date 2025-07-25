@@ -24,7 +24,7 @@ SELECT
   null as r_and_d_vs_generics,
   null as cereals_fungicide_segmentation
 FROM
-  `bcs-edf-ingestion.gc_agrowin_cz.crop_level`
+  `bcs-edf-ingestion-np.gc_agrowin_cz.crop_level`
 
 union all 
 
@@ -52,7 +52,7 @@ SELECT
   r_and_d_vs_generics,
   null as cereals_fungicide_segmentation
 FROM
-  bcs-edf-ingestion.gc_agrowin_cz.distributor_level
+  bcs-edf-ingestion-np.gc_agrowin_cz.distributor_level
 
 union all
 
@@ -80,7 +80,7 @@ SELECT
   null as r_and_d_vs_generics,
   null as cereals_fungicide_segmentation
 FROM
-  bcs-edf-ingestion.gc_agrowin_cz.product_level
+  bcs-edf-ingestion-np.gc_agrowin_cz.product_level
 
 union all
 
@@ -108,4 +108,4 @@ SELECT
   null as r_and_d_vs_generics,
   cereals_fungicide_segmentation
 FROM
-  `bcs-edf-ingestion.gc_agrowin_cz.active_ready_mix_level`;
+  `bcs-edf-ingestion-np.gc_agrowin_cz.active_ready_mix_level`;
