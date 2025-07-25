@@ -22,7 +22,7 @@ WITH
     value_user_000_local,
     value_distributor_000_local
   FROM
-    `bcs-edf-ingestion.gc_agrowin_cz.crop`)
+    `bcs-edf-ingestion-np.gc_agrowin_cz.crop`)
 
 SELECT
   b.year,
@@ -48,7 +48,7 @@ SELECT
 FROM
   crop_level a
 RIGHT JOIN
-  bcs-edf-ingestion.gc_agrowin_cz.cultivated_area b
+  bcs-edf-ingestion-np.gc_agrowin_cz.cultivated_area b
 ON
   a.country =b.country
   AND a.crop = b.crop
