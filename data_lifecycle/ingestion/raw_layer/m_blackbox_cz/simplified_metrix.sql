@@ -1,0 +1,1 @@
+SELECT * FROM `bcs-edf-ingestion-np.m_blackbox_lz_t.simplified_metrix`
