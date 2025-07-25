@@ -10,7 +10,7 @@ WITH
     country_group,
     eu_gb_no_ch_VS_non_eu,
     eu27_VS_non_eu
-  FROM `bcs-edf-ingestion.m_agrowin_cz.countries`)
+  FROM `bcs-edf-ingestion-np.m_agrowin_cz.countries`)
 
 SELECT
   year,
@@ -44,5 +44,5 @@ SELECT
   eu_gb_no_ch_VS_non_eu,
   eu27_VS_non_eu
 FROM countries a
-RIGHT JOIN bcs-edf-ingestion.gc_agrowin_cz.crop_clean b
+RIGHT JOIN bcs-edf-ingestion-np.gc_agrowin_cz.crop_clean b
 ON a.country_original = b.country;
