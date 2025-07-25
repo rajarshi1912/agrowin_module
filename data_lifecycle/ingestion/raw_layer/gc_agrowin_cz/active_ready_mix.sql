@@ -21,4 +21,4 @@ SELECT
   usr_000_lcl_val as value_user_000_local,
   distrb_000_lcl_val as value_distributor_000_local
 FROM
-  `bcs-edf-ingestion.gc_agrowin_cz.cssi_agrwn_actv_ready_mix_lvl`
+  `bcs-edf-ingestion-np.gc_agrowin_cz.cssi_agrwn_actv_ready_mix_lvl`
