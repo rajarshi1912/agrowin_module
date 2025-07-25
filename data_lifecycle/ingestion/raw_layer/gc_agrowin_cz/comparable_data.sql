@@ -36,7 +36,7 @@ WITH
     value_user_000_local,
     value_distributor_000_local,
     "In-Season" AS report_type
-  FROM `bcs-edf-ingestion.gc_agrowin_cz.in_season`) 
+  FROM `bcs-edf-ingestion-np.gc_agrowin_cz.in_season`) 
 
 SELECT
   year,
@@ -72,7 +72,7 @@ SELECT
   value_distributor_000_local,
   report_type,
   completeness_flag
-FROM bcs-edf-ingestion.gc_agrowin_cz.completeness_flag a
+FROM bcs-edf-ingestion-np.gc_agrowin_cz.completeness_flag a
 RIGHT JOIN in_season_cleaning b
 ON a.country=b.country AND a.crop_main_group=b.crop_main_group AND a.indication = b.indication
 ;
