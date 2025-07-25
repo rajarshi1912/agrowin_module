@@ -6,7 +6,7 @@ WITH
   SELECT
     distributor_r_and_d_vs_generics,
     distributor
-  FROM `bcs-edf-ingestion.m_agrowin_cz.companies`),
+  FROM `bcs-edf-ingestion-np.m_agrowin_cz.companies`),
   
   #Total Final Flow - Step 26.2
   country_mapping_clean AS(
@@ -55,7 +55,7 @@ WITH
     country_group,
     eu_gb_no_ch_VS_non_eu,
     eu27_VS_non_eu
-  FROM bcs-edf-ingestion.gc_agrowin_cz.country_mapping
+  FROM bcs-edf-ingestion-np.gc_agrowin_cz.country_mapping
   WHERE country IS NOT NULL AND country_1 IS NOT NULL)
 
 SELECT
