@@ -7,7 +7,7 @@ WITH
     local_currency_code as local_currency_code_map, 
     fixed_exchange_rate
   FROM
-    `bcs-edf-ingestion.m_agrowin_cz.21_ex_rates`)
+    `bcs-edf-ingestion-np.m_agrowin_cz.21_ex_rates`)
 
 SELECT
   year,
@@ -42,6 +42,6 @@ SELECT
   (value_user_000_local/fixed_exchange_rate) as value_user_000_fixed,
   (value_distributor_000_local/fixed_exchange_rate) as value_distributor_000_fixed
 FROM ex_rates a
-RIGHT JOIN bcs-edf-ingestion.gc_agrowin_cz.country_map b
+RIGHT JOIN bcs-edf-ingestion-np.gc_agrowin_cz.country_map b
 ON a.local_currency_code_map = b.local_currency_code
 ;
