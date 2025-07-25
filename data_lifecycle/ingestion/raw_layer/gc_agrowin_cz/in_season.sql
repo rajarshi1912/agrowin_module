@@ -10,13 +10,13 @@ SELECT
     ELSE UPPER(cntry_nm)
 END
   AS country,
-  UPPER(bus_unit) AS indication,
+  upper(bus_unit) AS indication,
   CASE
     WHEN crop_main_grp_cd = "Rapeseed / Canola" THEN "OILSEED-RAPE/CANOLA"
     ELSE UPPER(crop_main_grp_cd)
 END
   AS crop_main_group,
-  UPPER(crop_grp_cd) AS crop_group,
+  upper(crop_grp_cd) AS crop_group,
   crop_cd AS crop,
   prod_typ AS product_type,
   prod_grp AS product_group,
@@ -41,30 +41,9 @@ END
   exchg_rt_val_eu AS exchange_rate,
   lcl_crncy_cd AS local_currency_code,
   lcl_crncy_txt AS local_currency,
-  --CASE
-    --WHEN lcl_crncy_cd = "RUB" THEN "Russian Ruble"
-    --WHEN lcl_crncy_cd = "EUR" THEN "Euro"
-    --WHEN lcl_crncy_cd = "CHF" THEN "Swiss Franc"
-    --WHEN lcl_crncy_cd = "PLN" THEN "Zloty"
-    --WHEN lcl_crncy_cd = "BYN" THEN "BYN"
-    --WHEN lcl_crncy_cd = "MDL" THEN "Moldovan Leu"
-    --WHEN lcl_crncy_cd = "RON" THEN "New Romanian Leu"
-    --WHEN lcl_crncy_cd = "GBP" THEN "Pound Sterling"
-    --WHEN lcl_crncy_cd = "ZAR" THEN "Rand"
-    --WHEN lcl_crncy_cd = "UAH" THEN "Hryvnia"
-    --WHEN lcl_crncy_cd = "BGN" THEN "Bulgarian Lev"
-    --WHEN lcl_crncy_cd = "TRY" THEN "Turkish Lira"
-    --WHEN lcl_crncy_cd = "HUF" THEN "Forint"
-    --WHEN lcl_crncy_cd = "KZT" THEN "Tenge"
-    --WHEN lcl_crncy_cd = "CZK" THEN "Czech Koruna"
-    --WHEN lcl_crncy_cd = "RSD" THEN "Serbian Dinar"
-    --WHEN lcl_crncy_cd = "DKK" THEN "Danish Krone"
-    --WHEN lcl_crncy_cd = "SEK" THEN "Swedish Krona"
-    --ELSE CAST(NULL AS string)
---END
-  --AS local_currency,
   usr_000_lcl_val AS value_user_000_local,
   distrb_000_lcl_val AS value_distributor_000_local
 FROM
-  `bcs-edf-ingestion.gc_agrowin_cz.cssi_agrwn_in_season`
-WHERE yr_nbr > ((SELECT MAX(yr_nbr) FROM `bcs-edf-ingestion.gc_agrowin_cz.cssi_agrwn_in_season`)-5)
+  `bcs-edf-ingestion-np.gc_agrowin_cz.cssi_agrwn_in_season`
+WHERE
+  yr_nbr > ((SELECT MAX(yr_nbr) FROM `bcs-edf-ingestion-np.gc_agrowin_cz.cssi_agrwn_in_season`)-5)
