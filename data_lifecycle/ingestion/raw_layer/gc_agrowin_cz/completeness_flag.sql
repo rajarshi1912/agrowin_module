@@ -9,14 +9,14 @@ WITH
   indication,     
   MAX(year) AS max_year_per_group,
   #COUNT (DISTINCT year) as unique_years 
-  FROM bcs-edf-ingestion.gc_agrowin_cz.in_season   
+  FROM bcs-edf-ingestion-np.gc_agrowin_cz.in_season   
   GROUP BY country, crop_main_group, indication),
 
   #Total Final Flow - Step 3
   max_year_total AS (
   SELECT
     MAX(year) AS max_year_total
-  FROM bcs-edf-ingestion.gc_agrowin_cz.in_season),
+  FROM bcs-edf-ingestion-np.gc_agrowin_cz.in_season),
    
 
 
@@ -24,7 +24,7 @@ PrevYearCheck AS (
     SELECT DISTINCT country,     
   crop_main_group,     
   indication,year AS Prev_Year
-    FROM bcs-edf-ingestion.gc_agrowin_cz.in_season   
+    FROM bcs-edf-ingestion-np.gc_agrowin_cz.in_season   
 ),
 
 status_prev_year as(
