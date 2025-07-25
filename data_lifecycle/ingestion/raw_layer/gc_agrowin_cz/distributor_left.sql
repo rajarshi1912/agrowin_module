@@ -6,7 +6,7 @@ WITH
   SELECT
     DISTINCT distributor_original as distributor_original
   FROM
-    `bcs-edf-ingestion.gc_agrowin_cz.distributor`),
+    `bcs-edf-ingestion-np.gc_agrowin_cz.distributor`),
 
   #Advanced analytics - Step 9
   distributors_cross_join AS(
@@ -20,7 +20,7 @@ WITH
     indication,
     distributor_original
   FROM
-    bcs-edf-ingestion.gc_agrowin_cz.cultivated_area
+    bcs-edf-ingestion-np.gc_agrowin_cz.cultivated_area
   CROSS JOIN
     distinct_distributor)
 
@@ -47,7 +47,7 @@ SELECT
 FROM
   distributors_cross_join a
 LEFT JOIN
-  bcs-edf-ingestion.gc_agrowin_cz.distributor b
+  bcs-edf-ingestion-np.gc_agrowin_cz.distributor b
 ON
   a.country = b.country
   AND a.crop=b.crop
